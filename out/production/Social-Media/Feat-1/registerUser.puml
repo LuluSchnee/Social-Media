@@ -1,0 +1,62 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+Interface UserInterface{
+getName()
+getAge():int
+setBirthday(Date)
+getBirthDay():date
+setAdresss(Adress)
+getAddress:adress
+setProfileImage(Image)
+getProfileImage():Image
+ UploadMedia(Media);
+ getUploadedMedia():arrayList;
+createAlbum(string)
+getAlbums():arrayList
+addImageToAlbum(Image, Album)
+}
+
+Class User{
+name:String
+birthday:Date
+adress:Adress
+profileImage:File
+age:Int
+uploadedImages:arrayList
+albumList:arrayList
+}
+
+Interface Media{
+
+}
+class Image{
+image:File
+}
+class Album{
+images: arrayList
+title: string
+user: User
+album(User,title)
+addImage(Image, User)
+
+setImages(Image)
+
+}
+class Adress{
+street:String
+plz:(int)
+city:string
+country:string
+Adress(street,plz,country,city)
+}
+Media <|--  Image
+Adress --o User
+Album  --* User
+UserInterface <|-- User
+
+
+
+
+
+@enduml
