@@ -1,0 +1,55 @@
+Aufgabe 1: Iterative Modellierung und Implementierung
+Kontext: Die Aufgabe dient der weiteren Vertiefung Ihres Wissens zu Modellierung(sentscheidung)en.
+
+
+
+Folgende Anforderungen sollen erfüllt sei:
+
+Die Social-Network-Anwendung ermöglicht es Freunden, online miteinander in Verbindung zu treten und Informationen wie ihre Fotoalben oder Filme auszutauschen.
+Es ermöglicht es Personen, sich zu registrieren und persönliche Informationen einzugeben.
+Die Eingabe eines Nutzernamen ist für jeden registrierten Benutzer verpflichtend.
+Insbesondere können Benutzer Namen, Geburtstag, Adresse und ein Profilbild angeben.
+Nach der Registrierung kann der Nutzer Fotoalben anlegen, die jeweils eine Liste von Bildern enthalten, die der Nutzer hochgeladen hat.
+Nutzer können auch Videos und Musik in das eigene Profil hochladen.
+Für jeden hochgeladenen Inhalt muss der Zeitpunkt gespeichert werden, zu dem der Inhalt hinzugefügt wurde.
+In einer Zeitleiste sollen die abgelegten Inhalte für die Nutzer selber einsehbar sein. Die Zeitleiste kann auch für alle Freunde oder alle Benutzer des sozialen Netzwerks sichtbar gemacht werden.
+Werden neue Inhalte veröffentlicht, so sollen befreundete Nutzer möglichst schnell über diese neuen Inhalte informiert werden.
+Jeder Nutzer kann befreundete Personen (andere Nutzer) hinzufügen. Dazu kann ein Nutzer alle im registrierten Nutzer auflisten oder nach ihnen suchen.
+Das hier geplante soziale Netzwerk verfügt auch über einen Marktplatz, der eine Vielzahl von Spielen anbietet, die Benutzer spielen können. BauernhofSimulator und FoodStruggle sind zwei dieser Spiele.
+Neue Spiele können jederzeit auf dem Marktplatz hinzugefügt werden, das Anlegen geschieht durch professionelle Nutzer (Spielehersteller), die Freigabe erfolgt durch angestellte Personen des sozialen Netzwerks und nachfolgend können diese durch denselben professionellen Nutzer veröffentlicht werden.
+Sobald Nutzer eines der angebotenen Spiele spielen, merkt sich das Spiel, die Nutzer und die jeweils eigene höchste Punktzahl in diesem Spiel.
+Außerdem soll es eine öffentliche Rangliste pro Spiel geben.
+Des Weiteren können Nutzer die Spiele bewerten.
+
+
+Modellieren und implementieren Sie entsprechend den Anforderungen in einer objektorientierten Programmiersprache Ihrer Wahl.  Führen Sie folgende Schritte durch:
+
+Extrahieren Sie eine möglichst kleine Menge von Anforderungen. Diese Menge muss aber so definiert werden, dass bei ihrer Implementierung eine durch Nutzer nutzbare Anwendung entstehen würde. Notieren Sie diese Anforderungen.
+Formulieren Sie ausführliche, nachvollziehbare, nutzerzentrierte (mindestens auf der ersten Ebene), überprüfbare und technologieneutrale User Stories für die Anforderungen.
+Modellieren Sie die Anwendung in UML: Nutzen Sie dafür ein Klassendiagramm und Sequenzdiagramme für die wichtigsten Lebenszyklen/Interaktionen.
+Dokumentieren Sie die positiven und negativen Architekturentscheidungen in ADRs. Achten Sie dabei darauf, die Implikationen/Konsequenzen Ihrer (möglichen) Architekturentscheidung zu bewerten und eine nachvollziehbare Begründung für oder gegen die (mögliche) Architekturentscheidung auszuformulieren. Legen Sie diese Architekturentscheidungen entsprechend dem Markdown/Asciidoctor-Template aus Übung 6 ab.
+Implementieren Sie die wichtigsten Elemente Ihrer Modellierung und versehen Sie jede User Story mit (mindestens) einem entsprechenden Unit-Test.
+Committen Sie Ihre Implementierung inklusive der ADOC-Dateien in ein Git Repository. Taggen Sie die Anwendung im Git als Version “v1.0”.
+Wiederholen Sie Schritte und taggen Sie die Version im Git als “v2.0” bzw. "v3.0", wobei jeweils die Funktionalität erweitert werden soll.
+
+
+Kontrollfragen:
+
+Welche Funktionalität können Nutzer in Version 1.0, Version 2.0 und Version 3.0 tatsächlich nutzen? Waren es tatsächlich minimale Anforderungen/Funktionalitäten?
+Haben Sie sichergestellt, dass diese Funktionalität auch tatsächlich den Nutzern ermöglichen würden, konkrete Aufgaben zu lösen?
+Erfassen die User Stories funktionale und nichtfunktionale Anforderungen?
+Haben Sie den aktuellen Stand der Modellierung (Klassendiagramm und Sequenzdiagramme) im Git-Repository abgelegt? Was ist der passende Ort für die Ablage, um sicherzustellen, dass neuen Teammitgliedern einen bestmöglichen Einstieg in die aktuelle Implementierung ermöglicht wird?
+Wie viele der Änderungen durch neue Funktionalitäten haben Sie antizipiert und welche Änderungen erzeugten zwangsläufig ein Refactoring?
+Sind die Komponenten bzw. ist der Code in logisch getrennten, unabhängig entwickelbaren Modulen organisiert?
+Reagiert Ihr System stabil auf Ausfälle und unerwartete Situationen?
+Ermöglicht es Ihre Modellierung, Technologien oder Bibliotheken auszutauschen, ohne das gesamte System zu überarbeiten?
+In welchen Szenarien sorgen Ihre Architekturentscheidungen für geringeren Aufwand bei anderen Teammitgliedern?
+Wurde Overengineering vermieden (Entscheidungen sollten nur auf tatsächlichen Anforderungen basieren)?
+Sind die gewünschten Funktionalitäten (effizient) testbar?
+
+
+Hinweise:
+
+Achten Sie auf eine valide und robuste Modellierung und Implementierung. Es ist also dringend empfohlen, nach jeder Iteration.
+Für die Modellierung der ersten Iteration sollten Sie nicht länger als 45 min benötigen (sehr gut wären 30 min). Nachfolgende Iterationen sollten idealerweise im gleichen Zeitumfang durchführbar sein.
+Die Implementierung in einer Programmiersprache Ihrer Wahl (natürlich inklusive von Unit-Tests) sollte typischerweise nicht länger dauern, als die Modellierung.
