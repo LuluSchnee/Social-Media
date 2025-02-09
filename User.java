@@ -11,11 +11,13 @@ public Address address;
 public File profileImage;
 public ArrayList<Media> uploadedMedia= new ArrayList<>();
 public ArrayList<Album> albumList= new ArrayList<>();
-
+public ArrayList<User> FollowerList= new ArrayList<>();
+public TimeLineInterface timeLine;
 
 // wenn instanc erstellt wird , name muss da sein
 public User(String name) {
     this.name = name;
+    timeLine= new TimeLineFriends(this);
 }
     @Override
     public String getName() {
@@ -84,6 +86,21 @@ this.birthday = date;
         album.addImage(image,this);
     }
 
+    }
+
+    @Override
+    public void addFriend(User friend) {
+        this.FollowerList.add(friend);
+    }
+
+    @Override
+    public ArrayList<Media>getTimeLine(User requester) {
+        return timeLine.getTimeLine(requester) ;
+    }
+
+    @Override
+    public void setTimeLine(TimeLineInterface timeLine) {
+        this.timeLine= timeLine;
     }
 
 }

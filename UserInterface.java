@@ -17,4 +17,7 @@ public interface UserInterface {
     public void createAlbum(String albumName);
     public ArrayList<Album> getAlbums();
     public void addImageToAlbum(Image image, Album album);
+    public void addFriend(User friend);
+    public ArrayList<Media> getTimeLine(User requester);
+    public void setTimeLine(TimeLineInterface timeLine);
 }

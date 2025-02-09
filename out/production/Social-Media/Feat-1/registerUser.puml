@@ -15,6 +15,7 @@ getProfileImage():Image
 createAlbum(string)
 getAlbums():arrayList
 addImageToAlbum(Image, Album)
+addFriend(User)
 }
 
 Class User{
@@ -25,13 +26,25 @@ profileImage:File
 age:Int
 uploadedImages:arrayList
 albumList:arrayList
+Friends:arraylist
+getTimeLine(User requester)
+changeTimeline();
 }
 
 Interface Media{
-
+getDate:date
 }
 class Image{
 image:File
+timestamp:date
+}
+class Music{
+music:File
+timestamp:date
+}
+class Video{
+video:File
+timestamp:date
 }
 class Album{
 images: arrayList
@@ -50,8 +63,33 @@ city:string
 country:string
 Adress(street,plz,country,city)
 }
+
+Class UserManger{
+registerUser(string)
+findUserByName()
+getAllUser()
+}
+
+Interface TimeLineInterface{
+getTimeLine()
+}
+
+class TimeLineAll Implements TimeLineInterface{
+user:User
+getTimeLine(User requester)
+}
+
+class TimeLineFriends Implements TimeLineInterface{
+user:User
+
+
+getTimeLine(User requester)
+}
 Media <|--  Image
+Media <|--  Video
+Media <|--  Music
 Adress --o User
+TimeLineInterface --o User
 Album  --* User
 UserInterface <|-- User
 
